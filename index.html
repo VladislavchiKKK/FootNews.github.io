@@ -1,40 +1,29 @@
 <!DOCTYPE html>
-<html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Football news</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div style="display: flex;">
-        <div style="flex-grow: 1;">
-            <li><a href="index.html">Головна</a></li>
-        </div>
-        <div style="flex-grow: 3;">
-            <li><a href="about.html">Матчі</a></li>
-        </div>
-        <div style="flex-grow: 1;">
-            <li><a href="links.html">Карта сайту</a></li>
-        </div>
-        </div>
-    <h1> Ласкаво просимо до нашого футбольного сайту</h1>
-    <p>Футбол-це гра мільйонів, яка завжди викликає бурхливі емоції. Матчі і трансфери, які відбуваються на трансферному ринку не можуть бути поза увагою. Тому ласкаво просимо до нашого сайту</p><br>
-    <img src="https://brushme.com.ua/assets/images/products/36671/1744e9239c1901458a3971fec80ff6ff9fc33bd1.jpg" alt="Фото з Інтернету" width="500" height="500">
-    <ul>
-        <p>Список гравців шахтаря на матч проти Болоньї 18 вересня 2024 року</p>
-        <li>Дмитро Різник</li>
-        <li>Юхим Конопля</li>
-        <li>Валерій Бондар</li>
-        <li>Микола Матвієнко</li>
-        <li>Пердріньйо</li>
-        <li>Дмитро Криськів</li>
-        <li>Артем Бондаренко</li>
-        <li>Олександр Зубков</li>
-        <li>Георгій Судаков</li>
-        <li>Егіналду</li>
-        <li>Данило Сікан</li>
-        </ul>
-        <p><b>Таблиця матчів шахтаря в лч сезону 24/25</b></p>
+    <header class="header">
+        Ласкаво просимо до нашого футбольного сайту
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <p>Список гравців шахтаря на матч проти Болоньї 18 вересня 2024 року</p>
+            <li>Дмитро Різник</li>
+            <li>Юхим Конопля</li>
+            <li>Валерій Бондар</li>
+            <li>Микола Матвієнко</li>
+            <li>Пердріньйо</li>
+            <li>Дмитро Криськів</li>
+            <li>Артем Бондаренко</li>
+            <li>Олександр Зубков</li>
+            <li>Георгій Судаков</li>
+            <li>Егіналду</li>
+            <li>Данило Сікан</li>
+            </ul>
+            <p><b>Таблиця матчів шахтаря в лч сезону 24/25</b></p>
             <table border="3">
                 <tr>
                 <td>Шахтар - Болонья</td>
@@ -50,9 +39,73 @@
                 <td>Шахтар - Брест</td>
                 <td>Шахтар - Борусія</td>
                 </tr>
-                </table>  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TVgHFIZFk" 
-frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                
+                </table>
+        </aside>
+        <main class="content"> 
+            <p>Футбол-це гра мільйонів, яка завжди викликає бурхливі емоції. Матчі і трансфери, які відбуваються на трансферному ринку не можуть бути поза увагою. Тому ласкаво просимо до нашого сайту</p><br>
+            <img src="https://brushme.com.ua/assets/images/products/36671/1744e9239c1901458a3971fec80ff6ff9fc33bd1.jpg" alt="Фото з Інтернету" width="500" height="500">
+        </main>
+    </div>
+    <video width="520px" height="340px" controls>
+        <source src="video.mp4.mp4" type="video/mp4" />
+        </video>
+    <footer class="footer">
+         <div style="display: flex;">
+            <div style="flex-grow: 1;">
+                <li><a href="index.html">Головна</a></li>
+            </div>
+            <div style="flex-grow: 3;">
+                <li><a href="about.html">Матчі</a></li>
+            </div>
+            <div style="flex-grow: 1;">
+                <li><a href="links.html">Карта сайту</a></li>
+    </footer>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #0cf314;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 53px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: auto;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.content {
+    width: 80%;
+    padding: 15px;}
+    </style>
 </body>
 </html>
