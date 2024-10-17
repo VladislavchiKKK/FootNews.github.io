@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Fun</title>
+    <style>
+        .cont {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            position: absolute; /* Для можливості зміни позиції */
+        }
+
+        /* Для позиціонування контейнера кнопок */
+        #yesBtn {
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <h2>Ви точно хочете перейти на цю сторінку?</h2>
+        <button class="button" id="yesBtn">Так</button>
+        <button class="button" id="noBtn">Ні</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+
+        // Додаємо подію на кнопку "Ні"
+        noBtn.addEventListener('mouseenter', () => {
+            // Отримуємо розміри вікна браузера
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            // Отримуємо розміри кнопки "Ні"
+            const btnWidth = noBtn.offsetWidth;
+            const btnHeight = noBtn.offsetHeight;
+
+            // Генеруємо нові випадкові координати для кнопки в межах екрану
+            const x = Math.random() * (windowWidth - btnWidth); // Координата по горизонталі
+            const y = Math.random() * (windowHeight - btnHeight); // Координата по вертикалі
+
+            // Задаємо нові координати для кнопки
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+
+        // Додаємо подію на кнопку "Так"
+        yesBtn.addEventListener('click', () => {
+            // Перенаправлення на іншу сторінку при натисканні
+            window.location.href = 'links.html'; // Вкажіть потрібну URL-адресу
+        });
+    </script>
+</body>
+</html>
