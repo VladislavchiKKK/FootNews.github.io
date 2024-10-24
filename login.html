@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета опитування</title>
+</head>
+<body>
+    <h1>Анкета опитування</h1>
+    <form action="submit_survey.php" method="POST">
+        <!-- Ім'я респондента -->
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email респондента -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Питання 1: багатоваріантний вибір -->
+        <label for="question1">Ваш вік:</label>
+        <select id="question1" name="question1">
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+            <option value="46+">46+</option>
+        </select><br><br>
+
+        <!-- Питання 2: текстова відповідь -->
+        <label for="question2">Чим ви займаєтесь?</label>
+        <input type="text" id="question2" name="question2" required><br><br>
+
+        <!-- Питання 3: багатоваріантний вибір -->
+        <label for="question3">Чи подобається вам навчання?</label>
+        <input type="radio" id="yes" name="question3" value="Так" required>
+        <label for="yes">Так</label>
+        <input type="radio" id="no" name="question3" value="Ні">
+        <label for="no">Ні</label><br><br>
+
+        <!-- Питання 4: текстова відповідь -->
+        <label for="question4">Ваша улюблена дисципліна?</label>
+        <input type="text" id="question4" name="question4"><br><br>
+
+        <!-- Кнопка відправки -->
+        <input type="submit" value="Відправити анкету">
+    </form>
+</body>
+</html>
